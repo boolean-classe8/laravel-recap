@@ -19,6 +19,7 @@
                 <div class="card-body">
                     <p>Descrizione: {{ $product->description }}</p>
                     <p>Prezzo: {{ $product->price }}</p>
+                    <p>Slug: {{ $product->slug }}</p>
                     <p>Creato il: {{ $product->created_at }}</p>
                     <p>Aggiornato il: {{ $product->updated_at }}</p>
                 </div>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Product;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+
 
 class ProductController extends Controller
 {
@@ -41,6 +43,8 @@ class ProductController extends Controller
         $data = $request->all();
         // creo un nuovo prodotto
         $new_product = new Product();
+        // genero lo slug per il prodotto
+        $data['slug'] = Str::slug($data['name']);
         // compilo i campi del prodotto con i dati del form
         $new_product->fill($data);
         // salvo il prodotto

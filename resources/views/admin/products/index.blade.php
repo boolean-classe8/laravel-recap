@@ -19,6 +19,7 @@
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Prezzo</th>
+                        <th>Slug</th>
                         <th>Azioni</th>
                     </tr>
                 </thead>
@@ -28,6 +29,7 @@
                             <td>{{ $product->id }}</td>
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->price }}</td>
+                            <td>{{ $product->slug }}</td>
                             <td>
                                 <a class="btn btn-info"
                                 href="{{ route('admin.products.show', ['product' => $product->id]) }}">
@@ -46,7 +48,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="4">
+                            <td colspan="5">
                                 Non c'è alcun prodotto
                             </td>
                         </tr>

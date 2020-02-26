@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'HomeController@index')->name('index');
+Route::get('/products', 'ProductController@index')->name('products.index');
+Route::get('/products/{slug}', 'ProductController@show')->name('products.show');
 
 Auth::routes(['register' => false]);
 
